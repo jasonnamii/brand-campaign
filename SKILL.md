@@ -20,7 +20,7 @@ description: |
 | # | 규칙 | 이유 |
 |---|------|------|
 | 1 | **60:40 이중트랙 필수** — Brand Building 60% : Sales Activation 40% 기본. 단기 Activation 80%+ 편중 시 Redflag. 카테고리별 조정 허용(B2C 이커머스 70:30, B2B 50:50) | IPA 996 cases(1980-2013) 실증. ESOV +10pt = 시장점유율 +0.5%/yr |
-| 2 | **Channel-Creative Fit 강제** — 단일 크리에이티브 멀티채널 배포 금지. 플랫폼별 Adaptation Key 필수 | TikTok(1.7배 공유)·IG Reels(1.3배 전환)·Naver(검색의도)·Kakao(Open 3-5배) 알고리즘·소비자행동 상이 |
+| 2 | **Channel-Creative Fit 강제 + PRE_WRITE** — 단일 크리에이티브 멀티채널 배포 금지. 플랫폼별 Adaptation Key 필수. Big Idea·Adaptation Key 작성 *직전* §②-b PRE_WRITE 5룰(단문·단일약속·시그니처·1명제·AI식 사전회피) 강제 | TikTok·IG·Naver·Kakao 알고리즘 상이 + 사전 룰 없으면 AI식 슬로건 즉시 사망 |
 | 3 | **DBA 보전 원칙 (Byron Sharp)** — Distinctive Brand Assets는 리뉴얼해도 교체 금지. 색상·로고·사운드·캐릭터 10년+ 유지가 기본 | Mental Availability·Physical Availability 둘 다 DBA에 의존 |
 | 4 | **한국 디폴트 True** — 네이버·카카오 기본 포함, 뒷광고 규제(공정위) 자동 Redflag. 해외 명시 시만 Off | 사용자 절대다수 한국. KakaoTalk MAU 4,823만(인구 97.2%)·네이버 검색 점유율 63% |
 | 5 | **5층 독립 호출 가능** — "L3 미디어믹스만"·"L5 측정만" 단독 실행 허용 | 실무에서 특정 층만 진단·설계 자주 필요 |
@@ -32,7 +32,7 @@ description: |
 ## 실행 흐름
 
 ```
-🚦 PREFLIGHT(모드·도메인·예산·타깃) → ① Redflag 10종 스크린 → ② 5층 적용 → ③ 도메인 오버레이 → ④ 한국 오버레이 → ⑤ 산출물
+🚦 PREFLIGHT(모드·도메인·예산·타깃) → ① Redflag 10종 스크린 → ② 5층 적용 → ②-b L2 PRE_WRITE 룰 강제 → ③ 도메인 오버레이 → ④ 한국 오버레이 → ⑤ 산출물
 ```
 
 ### 🚦 PREFLIGHT (4체크)
@@ -70,6 +70,22 @@ description: |
 | L3 MEDIA | Channel-Creative Fit·60:40 배분·플라이트 | 양트랙 | `→ references/L3_media.md` |
 | L4 EXECUTION | 프로덕션·캘린더·컴플라이언스·체험 | Activation 40% | `→ references/L4_execution.md` |
 | L5 MEASUREMENT | Brand Lift·MMM·NPS·ESOV 달성률 | 양트랙 분리 | `→ references/L5_measurement.md` |
+
+### ②-b L2 CREATIVE PRE_WRITE — Big Idea 작성 직전 룰
+
+**목적:** Big Idea·DBA·캠페인 카피 한 줄을 *작성 시점에* 룰 강제. 사후 평가 ✗ → 사전 생성.
+
+| # | 룰 | 캠페인 결로 변환 | FAIL 신호 |
+|---|---|---|---|
+| 1 | **Big Idea 단문** | ≤15자. "X는 Y다" or "X 없이 Y" 형식 | 슬로건·미사여구·30자+ |
+| 2 | **단일약속** | Big Idea 1줄 = 캠페인 척추. 약속 2개+ = 재수렴 | 균형요약·다중메시지 |
+| 3 | **시그니처 자연주입** | 브랜드 보이스 결로. 의식적 박제 ✗ | 광고대행사식 어조 |
+| 4 | **문장당 1명제** | 1행 = 1주장. AND·OR 묶기 ✗ | "A하고 B도 되고" |
+| 5 | **AI식 사전회피** | "여러분의 일상에", "함께 만들어가는", "진정한 가치" — 작성 단계 차단 | 추상명사 나열 |
+
+**Big Idea 검증:** PRE_WRITE 5룰 통과 후 → Ogilvy 5 Questions로 사후 검증. 사전 + 사후 = 이중 게이트.
+
+**Adaptation Key:** 채널별 변형도 PRE_WRITE 강제 — TikTok 첫 3초 훅 ≤10자 / IG Reels ≤12자 / Naver 의문문 ≤15자 / Kakao 친근체 ≤18자.
 
 ### ③ 도메인 라우터 (7도메인)
 
@@ -127,6 +143,41 @@ description: |
 
 ---
 
+
+
+---
+
+
+**📚 형 코퍼스 실측 예시·BAN/GOOD 사전 (4단계 박제):**
+- `→ references/jason-corpus-examples.md` (형 코퍼스 1.05MB · PT 17개·IR 2개·BP 추출 verbatim 헤드·구문)
+- `→ VAULT/Agent-Ops/_refs/jason_lexicon_BAN.md` (AI식 28개 어휘·형 코퍼스 0회 등장 = 확정 BAN)
+- `→ VAULT/Agent-Ops/_refs/jason_lexicon_GOOD.md` (형 시그니처 50+ 어휘·구문 패턴)
+
+---
+
+## §CONFIRM_GATE — 송출 직전 형 컨펌 (3단계 가드)
+
+**목적:** PRE_WRITE 자가신고 우회 차단. 자체검증 통과 = 송출 ✗ → 형 컨펌 후 송출.
+
+**발동:** 산출물 송출 *직전* 1회.
+
+**형식 (verbatim):**
+```
+🔍 송출 전 검토 부탁드려요. AI 티·번역투·장황 있나요?
+[OK / 수정 / 재작성]
+```
+
+**규칙:**
+- 형 OK → 최종 송출
+- 형 수정 → 형 지적 부분만 PRE_WRITE 재진입 → 재출력
+- 형 재작성 → 모드 처음부터 재실행
+
+**SCOPE_OUT (컨펌 면제):**
+- ≤5줄 답변·단답·확인성·실행보고
+- 진단 본문 (대화 내 분석, 산출물 ✗)
+- 일반대화·핑퐁·컨펌게이트 자체
+
+**CHECK:** 산출물 송출인데 컨펌게이트 미발동 = FAIL → 송출 폐기·재출력.
 
 ## §INV NO_WORK_LABEL (산출물·대화 본질 보호)
 
